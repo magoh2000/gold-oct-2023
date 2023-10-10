@@ -25,6 +25,6 @@ while True:
         print('It was later than that!')
     elif python_year > 1994: 
         print('It was earlier than that!')
-    elif python_year == 1994:
+    else:
+        print('Correct!')
         break
-print('Correct!')
