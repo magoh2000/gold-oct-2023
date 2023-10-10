@@ -25,7 +25,7 @@ instance_department = input('What is the department name the instance is being r
 instance_department = str.lower(instance_department)
 
 if not (instance_department == 'marketing' or instance_department == 'accounting' or instance_department == 'finops'):
-    instance_department = input('Please try again - Your input is not valid. What is the department name the instance is being requested for? (the only acceptable values are Marketing, Accounting, and FinOps) ')
+    instance_department = input('Please try again - Your input is not valid. What is the department name the instance is being requested for? (the only acceptable values are Marketing, Accounting, and FinOps. The program will terminate on another invalid entry.) ')
     instance_department = str.lower(instance_department)
 
 for i in range(instance_count): 
