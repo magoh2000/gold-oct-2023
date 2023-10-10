@@ -10,8 +10,18 @@ Then, show the following message with the calculated salary:
 Last month, you earned {hours * hourly_rate} dollars
 """
 
+# Prompt the user for the number of hours worked last month.
 hours = input('How many hours did you work last month? ')
+
+# Prompt the user for the hourly rate.
 hourly_rate = input('What is your hourly rate? ')
+
+# Convert the user inputs to floating-point numbers for calculations.
 hours = float(hours)
 hourly_rate = float(hourly_rate)
-print('Last month, you earned', hours*hourly_rate,'dollars')
+
+# Calculate the earnings by multiplying the hours worked by the hourly rate.
+earnings = hours * hourly_rate
+
+# Display the calculated earnings to the user.
+print('Last month, you earned', earnings, 'dollars')
