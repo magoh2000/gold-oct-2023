@@ -19,12 +19,18 @@ It was later than that!
 When was Python 1.0 released? << remember to add a space
 """
 
+# Create an indefinite loop (while True) to repeatedly ask the user for input.
 while True:
+    # Prompt the user for the release year of Python 1.0 and convert the input to an integer.
     python_year = int(input('When was Python 1.0 released? '))
+    
+    # Check if the input year is less than 1994.
     if python_year < 1994:
         print('It was later than that!')
-    elif python_year > 1994: 
+    # Check if the input year is greater than 1994.
+    elif python_year > 1994:
         print('It was earlier than that!')
     else:
+        # If the input year is equal to 1994, print 'Correct!' and exit the loop.
         print('Correct!')
         break
