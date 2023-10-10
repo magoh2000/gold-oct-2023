@@ -20,19 +20,26 @@ import math
 import os
 import string
 
+# Prompt the user for the number of instances they want to request.
 instance_count = int(input('How many instances are you requesting? '))
+
+# Prompt the user for the department name and convert it to lowercase for consistency.
 instance_department = input('What is the department name the instance is being requested for? (the only acceptable values are Marketing, Accounting, and FinOps) ')
 instance_department = str.lower(instance_department)
 
+# Check if the provided department name is valid. If not, ask the user to provide a valid input.
 if not (instance_department == 'marketing' or instance_department == 'accounting' or instance_department == 'finops'):
     instance_department = input('Please try again - Your input is not valid. What is the department name the instance is being requested for? (the only acceptable values are Marketing, Accounting, and FinOps. The program will terminate on another invalid entry.) ')
     instance_department = str.lower(instance_department)
 
-for i in range(instance_count): 
-    # get random string to make the EC2 instance name unique 
+# Generate the requested number of unique EC2 instance names.
+for i in range(instance_count):
+    # Generate a random string to make the EC2 instance name unique.
     characters = string.ascii_letters + string.digits
     unique = ''.join(random.choice(characters) for i in range(8))
-    print(instance_department+'-'+unique)
+    
+    # Print the generated EC2 instance name with the department prefix.
+    print(instance_department + '-' + unique)
 
 
 
