@@ -1,6 +1,5 @@
-import os
-import time
-import datetime
+import os       #module included to be able to interact with the filesystem
+import datetime #module used for manipulating dates and times.
 
 # Change the current working directory
 directory = os.chdir('gold-oct-2023')
@@ -16,20 +15,17 @@ dt = datetime.datetime
 
 # List of dictionaries for storing file information
 file_list = []
-count = 0
 
 # Iterate over each file in the directory
 for file in files:
-    count = count + 1
     # Get the creation time of the file
     timestamp = os.path.getctime(file)
     # Convert the timestamp to a human-readable date and time format
     date_time = dt.fromtimestamp(timestamp).strftime('%Y-%m-%d %H:%M:%S')  # with help from a little Google search
     # Create a dictionary for each file containing relevant information
     file_info = {
-        "index:": count,
         "file_name": file,
-        "file_size": os.path.getsize(file),
+        "file_size_in_bytes": os.path.getsize(file),
         "file_time": date_time
         
     }
