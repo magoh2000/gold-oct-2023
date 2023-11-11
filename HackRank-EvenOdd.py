@@ -10,7 +10,6 @@ If n is even and greater than 20, print Not Weird
 
 """
 
-
 #!/bin/python3
 
 # Import necessary modules
@@ -21,6 +20,9 @@ import re
 import sys
 
 # Check if the script is being run as the main program
+
+print("Enter a number: ")
+
 if __name__ == '__main__':
     # Prompt the user for an integer input and strip any leading/trailing whitespace
     n = int(input().strip())
